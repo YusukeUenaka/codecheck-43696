@@ -16,11 +16,11 @@ public class App {
         String NUM = null;
         for (int i = 0, l = args.length; i < l; i++) {
             //String output = String.format("argv[%s]: %s", i, args[i]);
-             if (i == 0) {
-                 CMD = args[i];
-             } else {
-                 NUM = args[i];
-             }
+            if (i == 0) {
+                CMD = args[i];
+            } else {
+                NUM = args[i];
+            }
         }
         String output = answer(CMD, NUM);
         System.out.println(output);
@@ -37,7 +37,7 @@ public class App {
 
         //処理
         //if (isNumber(num) && ENCODE.equals(cmd)) {
-            if (ENCODE.equals(cmd)) {
+        if (ENCODE.equals(cmd)) {
             return  encode(num, SHIN_10);
         } else if (DECODE.equals(cmd)) {
             Long numL = Long.parseLong(num);
