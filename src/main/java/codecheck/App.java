@@ -2,8 +2,6 @@ package codecheck;
 
 import java.util.regex.Pattern;
 
-import static java.lang.Long.parseLong;
-
 public class App {
 
     private static String ENCODE = "encode";
@@ -41,7 +39,7 @@ public class App {
         if (ENCODE.equals(cmd)) {
             return  encode(num, SHIN_10);
         } else if (DECODE.equals(cmd)) {
-            Long numL = parseLong(num);
+            Long numL = Long.parseLong(num);
             return decode(numL, SHIN_10);
         } else if (ALIGN.equals(cmd)) {
             return align(num);
@@ -53,7 +51,8 @@ public class App {
     public static String encode(String A, int B) {
         String str = A;
         int radix = B;
-        Long result = parseLong(str, radix);
+        Long result = Long.valueOf(str, radix);
+        //Long result =Long.parseLong(str, radix);
         return String.valueOf(result);
     }
 
