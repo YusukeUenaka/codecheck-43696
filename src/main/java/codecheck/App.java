@@ -1,5 +1,7 @@
 package codecheck;
 
+import oracle.jrockit.jfr.StringConstantPool;
+
 import java.util.regex.Pattern;
 
 public class App {
@@ -37,10 +39,12 @@ public class App {
         //処理
         //if (isNumber(num) && ENCODE.equals(cmd)) {
         if (ENCODE.equals(cmd)) {
-            return  encode(num, SHIN_10);
+            return replaceEncode(num);
+            //return  encode(num, SHIN_10);
         } else if (DECODE.equals(cmd)) {
-            Long numL = Long.parseLong(num);
-            return decode(numL, SHIN_10);
+            return replaceDencode(num);
+            //Long numL = Long.parseLong(num);
+            //return decode(numL, SHIN_10);
         } else if (ALIGN.equals(cmd)) {
             return align(num);
         }
@@ -51,8 +55,8 @@ public class App {
     public static String encode(String A, int B) {
         String str = A;
         int radix = B;
-        //Long result = Long.valueOf(str, radix);
-        int result =(int)Long.parseLong(str, radix);
+        int result = Long.valueOf(str, radix).intValue();
+        //int result =(int)Long.parseLong(str, radix);
         return String.valueOf(result);
     }
 
@@ -76,5 +80,18 @@ public class App {
             return true;
         }
         return false;
+    }
+
+    public static String replaceEncode (String str) {
+        String result = null;
+        result = str.replaceAll("a,A","0");
+        result = str.replaceAll("e,E","4");
+        return result;
+    }
+    public static String replaceDencode (String str) {
+        String result = null;
+        reslut = str.replaceAll("1","A");
+        reslut = str.replaceAll("2","B");
+        return result;
     }
 }
