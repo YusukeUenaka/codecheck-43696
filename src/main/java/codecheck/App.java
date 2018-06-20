@@ -32,11 +32,9 @@ public class App {
 
         //処理
         if (ENCODE.equals(cmd)) {
-            //return replaceEncode(num);
-            return replaceDecode(num);
-        } else if (DECODE.equals(cmd)) {
-            //return replaceDecode(num);
             return replaceEncode(num);
+        } else if (DECODE.equals(cmd)) {
+            return replaceDecode(num);
         } else if (ALIGN.equals(cmd)) {
             return align(num);
         }
