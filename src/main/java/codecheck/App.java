@@ -1,7 +1,5 @@
 package codecheck;
 
-import oracle.jrockit.jfr.StringConstantPool;
-
 import java.util.regex.Pattern;
 
 public class App {
@@ -18,9 +16,9 @@ public class App {
         for (int i = 0, l = args.length; i < l; i++) {
             //String output = String.format("argv[%s]: %s", i, args[i]);
             if (i == 0) {
-                CMD = args[i];
+                CMD = args[i].toString();
             } else {
-                NUM = args[i];
+                NUM = args[i].toString();
             }
         }
         String output = answer(CMD, NUM);
@@ -36,14 +34,13 @@ public class App {
         if (ENCODE.equals(cmd)) {
             return replaceEncode(num);
         } else if (DECODE.equals(cmd)) {
-            return replaceDencode(num);
+            return replaceDecode(num);
         } else if (ALIGN.equals(cmd)) {
             return align(num);
         }
         return null;
-
     }
-
+    /*
     public static String encode(String A, int B) {
         String str = A;
         int radix = B;
@@ -58,7 +55,7 @@ public class App {
         String result = Long.toString(str, radix);
         return result;
     }
-
+   */
     public static String align(String A) {
         String result = null;
         String str = A;
@@ -74,7 +71,7 @@ public class App {
         return false;
     }
 
-    public static String replaceDencode (String str) {
+    public static String replaceDecode(String str) {
         String result = null;
         result = str.replaceAll("a,A","0");
         result = str.replaceAll("b,B","1");
