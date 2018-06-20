@@ -64,6 +64,9 @@ public class App {
         System.out.println(String.valueOf(array[0].toString()));
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i].toString());
+            System.out.println((array.length-i));
+            int a = 9^(array.length-i);
+            System.out.println(a);
             result += Integer.parseInt(array[i].toString())*(9^(array.length-i));
         }
         System.out.println(String.valueOf(result));
