@@ -59,7 +59,7 @@ public class App {
         String str = A;
         int radix = B;
         System.out.println(str);
-        int result = Integer.parseInt(str, radix);
+        int result = Integer.valueOf(str, radix);
         return String.valueOf(result);
     }
 
