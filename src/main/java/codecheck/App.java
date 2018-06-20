@@ -32,9 +32,11 @@ public class App {
 
         //処理
         if (ENCODE.equals(cmd)) {
-            return replaceEncode(num);
-        } else if (DECODE.equals(cmd)) {
+            //return replaceEncode(num);
             return replaceDecode(num);
+        } else if (DECODE.equals(cmd)) {
+            //return replaceDecode(num);
+            return replaceEncode(num);
         } else if (ALIGN.equals(cmd)) {
             return align(num);
         }
@@ -71,30 +73,31 @@ public class App {
         return false;
     }
 
+    
     public static String replaceDecode(String str) {
-        String result = null;
-        result = str.replaceAll("a,A","0");
-        result = str.replaceAll("b,B","1");
-        result = str.replaceAll("c,C","2");
-        result = str.replaceAll("d,D","3");
-        result = str.replaceAll("e,E","4");
-        result = str.replaceAll("f,F","5");
-        result = str.replaceAll("g,G","6");
-        result = str.replaceAll("h,H","7");
-        result = str.replaceAll("i,I","8");
-        return result;
+        StringBuilder result = new StringBuilder();
+        result = result.append(str.replaceAll("a,A","0"));
+        result = result.append(str.replaceAll("b,B","1"));
+        result = result.append(str.replaceAll("c,C","2"));
+        result = result.append(str.replaceAll("d,D","3"));
+        result = result.append(str.replaceAll("e,E","4"));
+        result = result.append(str.replaceAll("f,F","5"));
+        result = result.append(str.replaceAll("g,G","6"));
+        result = result.append(str.replaceAll("h,H","7"));
+        result = result.append(str.replaceAll("i,I","8"));
+        return result.toString();
     }
     public static String replaceEncode (String str) {
-        String result = null;
-        result = str.replaceAll("0","A");
-        result = str.replaceAll("1","B");
-        result = str.replaceAll("2","C");
-        result = str.replaceAll("3","D");
-        result = str.replaceAll("4","E");
-        result = str.replaceAll("5","F");
-        result = str.replaceAll("6","G");
-        result = str.replaceAll("7","H");
-        result = str.replaceAll("8","I");
-        return result;
+        StringBuilder result = new StringBuilder();
+        result = result.append(str.replaceAll("0","A"));
+        result = result.append(str.replaceAll("1","B"));
+        result = result.append(str.replaceAll("2","C"));
+        result = result.append(str.replaceAll("3","D"));
+        result = result.append(str.replaceAll("4","E"));
+        result = result.append(str.replaceAll("5","F"));
+        result = result.append(str.replaceAll("6","G"));
+        result = result.append(str.replaceAll("7","H"));
+        result = result.append(str.replaceAll("8","I"));
+        return result.toString();
     }
 }
