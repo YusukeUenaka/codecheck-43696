@@ -74,7 +74,7 @@ public class App {
         return false;
     }
 
-    public static String replaceEncode (String str) {
+    public static String replaceDencode (String str) {
         String result = null;
         result = str.replaceAll("a,A","0");
         result = str.replaceAll("b,B","1");
@@ -87,7 +87,7 @@ public class App {
         result = str.replaceAll("i,I","8");
         return result;
     }
-    public static String replaceDencode (String str) {
+    public static String replaceEncode (String str) {
         String result = null;
         result = str.replaceAll("0","A");
         result = str.replaceAll("1","B");
