@@ -58,8 +58,14 @@ public class App {
     public static String decode(String A, int B) {
         String str = A;
         int radix = B;
-        System.out.println(str);
-        int result = Integer.valueOf(str, radix);
+        int result = 0;
+        String[] array = null;
+        array = str.split("");
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i].toString());
+            result += Integer.parseInt(array[i].toString())*(9^(array.length-i));
+        }
+        System.out.println(String.valueOf(result));
         return String.valueOf(result);
     }
 
