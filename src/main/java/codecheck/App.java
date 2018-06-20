@@ -90,8 +90,8 @@ public class App {
     }
     public static String replaceDencode (String str) {
         String result = null;
-        reslut = str.replaceAll("1","A");
-        reslut = str.replaceAll("2","B");
+        result = str.replaceAll("1","A");
+        result = str.replaceAll("2","B");
         return result;
     }
 }
