@@ -32,30 +32,32 @@ public class App {
 
         //処理
         if (ENCODE.equals(cmd)) {
-            return replaceEncode(num);
+            return encode(num, SHIN_9);
+            //return replaceEncode(num);
         } else if (DECODE.equals(cmd)) {
-            return replaceDecode(num);
+            return decode(num, SHIN_9);
+            //return replaceDecode(num);
         } else if (ALIGN.equals(cmd)) {
             return align(num);
         }
         return null;
     }
-    /*
-    public static String encode(String A, int B) {
-        String str = A;
-        int radix = B;
-        int result = Long.valueOf(str, radix).intValue();
-        //int result =(int)Long.parseLong(str, radix);
-        return String.valueOf(result);
-    }
 
-    public static String decode(Long A, int B) {
-        Long str = A;
+    public static String encode(String A, int B) {
+        Long str = Long.parseLong(A);
         int radix = B;
         String result = Long.toString(str, radix);
+        //int result =(int)Long.parseLong(str, radix);
         return result;
     }
-   */
+
+    public static String decode(String A, int B) {
+        String str = A;
+        int radix = B;
+        Long result = Long.parseLong(str, radix);
+        return Long.toString(result);
+    }
+
     public static String align(String A) {
         String result = null;
         String str = A;
@@ -71,7 +73,7 @@ public class App {
         return false;
     }
 
-    
+
     public static String replaceDecode(String str) {
         StringBuilder result = new StringBuilder();
         result = result.append(str.replaceAll("a,A","0"));
