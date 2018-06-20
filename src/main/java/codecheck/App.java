@@ -51,8 +51,8 @@ public class App {
     public static String encode(String A, int B) {
         String str = A;
         int radix = B;
-        Long result = Long.valueOf(str, radix);
-        //Long result =Long.parseLong(str, radix);
+        //Long result = Long.valueOf(str, radix);
+        int result =(int)Long.parseLong(str, radix);
         return String.valueOf(result);
     }
 
