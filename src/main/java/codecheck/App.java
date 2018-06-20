@@ -21,6 +21,8 @@ public class App {
                 NUM = args[i].toString();
             }
         }
+        System.out.println(CMD);
+        System.out.println(NUM);
         String output = answer(CMD, NUM);
         System.out.println(output);
     }
