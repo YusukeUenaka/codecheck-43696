@@ -31,20 +31,12 @@ public class App {
         String str = null;
         String cmd = CMD;
         String num = NUM;
-        //引数二つ目の0判定
-        //if (!num.isEmpty()) {
-        //    str = num;
-        //}
 
         //処理
-        //if (isNumber(num) && ENCODE.equals(cmd)) {
         if (ENCODE.equals(cmd)) {
             return replaceEncode(num);
-            //return  encode(num, SHIN_10);
         } else if (DECODE.equals(cmd)) {
             return replaceDencode(num);
-            //Long numL = Long.parseLong(num);
-            //return decode(numL, SHIN_10);
         } else if (ALIGN.equals(cmd)) {
             return align(num);
         }
@@ -85,13 +77,27 @@ public class App {
     public static String replaceEncode (String str) {
         String result = null;
         result = str.replaceAll("a,A","0");
+        result = str.replaceAll("b,B","1");
+        result = str.replaceAll("c,C","2");
+        result = str.replaceAll("d,D","3");
         result = str.replaceAll("e,E","4");
+        result = str.replaceAll("f,F","5");
+        result = str.replaceAll("g,G","6");
+        result = str.replaceAll("h,H","7");
+        result = str.replaceAll("i,I","8");
         return result;
     }
     public static String replaceDencode (String str) {
         String result = null;
-        result = str.replaceAll("1","A");
-        result = str.replaceAll("2","B");
+        result = str.replaceAll("0","A");
+        result = str.replaceAll("1","B");
+        result = str.replaceAll("2","C");
+        result = str.replaceAll("3","D");
+        result = str.replaceAll("4","E");
+        result = str.replaceAll("5","F");
+        result = str.replaceAll("6","G");
+        result = str.replaceAll("7","H");
+        result = str.replaceAll("8","I");
         return result;
     }
 }
