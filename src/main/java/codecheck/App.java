@@ -48,7 +48,9 @@ public class App {
     public static String encode(String A, int B) {
         Long str = Long.parseLong(A);
         int radix = B;
+        System.out.println(str.toString());
         String result = Long.toString(str, radix);
+
         //int result =(int)Long.parseLong(str, radix);
         return result;
     }
@@ -56,6 +58,7 @@ public class App {
     public static String decode(String A, int B) {
         String str = A;
         int radix = B;
+        System.out.println(str);
         Long result = Long.parseLong(str, radix);
         return Long.toString(result);
     }
