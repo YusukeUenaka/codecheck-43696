@@ -11,7 +11,6 @@ public class App {
     private static int SHIN_9 = 9;
 
     public static void main(String[] args) {
-        String[] args = new String[2];
         String CMD = null;
         String NUM = null;
         for (int i = 0, l = args.length; i < l; i++) {
