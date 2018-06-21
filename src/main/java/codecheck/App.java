@@ -75,7 +75,11 @@ public class App {
             System.out.println("51:"+ input );
             String a = replaceEncode(input);
             System.out.println("52:"+ a);
-            output += a;
+            if (b == length-1) {
+                output = a;
+            } else {
+                output += a;
+            }
         }
 
         return output;
