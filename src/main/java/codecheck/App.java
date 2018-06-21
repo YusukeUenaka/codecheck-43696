@@ -72,14 +72,18 @@ public class App {
         String[] array = null;
         int[] arrayNum = null;
         array = str.split("");
-        System.out.println(String.valueOf(array[0].toString()));
+        System.out.println(String.valueOf("1:"+array[0].toString()));
+        System.out.println(String.valueOf("2:"+array[1].toString()));
         int k = array.length;
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i].toString());
-            System.out.println(replaceDecode(array[i].toString()));
-            System.out.println(String.valueOf(k));
-            arrayNum[array.length-1-i] = Integer.parseInt(replaceDecode(array[i].toString()));
+
+        for (int i = 1; i < array.length-1; i++) {
+            if (array[i] == null) {
+                break;
+            }
+            arrayNum[i-1] = Integer.parseInt(replaceDecode(array[i].toString()));
         }
+        //String[]
+
         System.out.println(String.valueOf(result));
         return String.valueOf(result);
     }
