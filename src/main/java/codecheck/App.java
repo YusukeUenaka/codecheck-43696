@@ -34,10 +34,8 @@ public class App {
         //処理
         if (ENCODE.equals(cmd)) {
             return encode(num, SHIN_9);
-            //return replaceEncode(num);
         } else if (DECODE.equals(cmd)) {
             return decode(num, SHIN_9);
-            //return replaceDecode(num);
         } else if (ALIGN.equals(cmd)) {
             return align(num);
         }
@@ -58,30 +56,21 @@ public class App {
         while (str >= 9 ) {
             numlist.add(str%9);
             str = str/9;
-            System.out.println("1:"+String.valueOf(numlist.get(i)));
-            System.out.println("2:"+String.valueOf(str));
             i++;
         }
         numlist.add(str);
         int length = numlist.size();
-        System.out.println("3:"+length);
         String[] array = null;
         int count = 0;
-        System.out.println("44:"+ numlist.get(1) );
-
         for (int b=length-1; b >= 0; b--) { //(int i = 0; i < array.length; i++)
-            System.out.println("50:"+ (b));
             String input = numlist.get(b).toString();
-            System.out.println("51:"+ input );
             String a = replaceEncode(input);
-            System.out.println("52:"+ a);
             if (b == length-1) {
                 output = a;
             } else {
                 output += a;
             }
         }
-
         return output;
     }
 
