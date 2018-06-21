@@ -31,7 +31,17 @@ public class App {
         String str = null;
         String cmd = CMD;
         String num = NUM;
+/*        String[] strNum = null;
 
+        if (!isNumber(num)) {
+                strNum = num.split("");
+        }
+
+
+        for (int i = 0, l = args.length; i < l; i++) {
+            replaceDecode(strNum[i].toString());
+        }
+*/
         //処理
         if (ENCODE.equals(cmd)) {
             return encode(num, SHIN_9);
@@ -66,7 +76,7 @@ public class App {
             System.out.println(array[i].toString());
             System.out.println((array.length-i));
             int a = 9^(array.length-i);
-            System.out.println(a);
+            System.out.println("jijo:"+a);
             result += Integer.parseInt(array[i].toString())*(9^(array.length-i));
         }
         System.out.println(String.valueOf(result));
@@ -87,6 +97,8 @@ public class App {
         }
         return false;
     }
+
+
 
 
     public static String replaceDecode(String str) {
