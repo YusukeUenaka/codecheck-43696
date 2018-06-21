@@ -76,8 +76,8 @@ public class App {
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i].toString());
             System.out.println(replaceDecode(array[i].toString()));
-            System.out.println(String.valueOf(array.length-i));
-            arrayNum[array.length-i] = Integer.parseInt(replaceDecode(array[i].toString()));
+            System.out.println(String.valueOf(array.length-1-i));
+            arrayNum[array.length-1-i] = Integer.parseInt(replaceDecode(array[i].toString()));
         }
         System.out.println(String.valueOf(result));
         return String.valueOf(result);
