@@ -102,19 +102,23 @@ public class App {
 
     public static String align(String A) {
         String result = null;
+        String output = null;
         String str = A;
         str = decode(str, SHIN_9);
         int input = Integer.valueOf(str);
         System.out.println("1:"+input);
-        
+
         int x = 1;
-        while (((input+x)%7) == 0) {
+        while (((input+x)%7) != 0) {
             System.out.println("2:"+x);
             x++;
         }
         System.out.println("3:"+x);
         result = encode(String.valueOf(x), SHIN_9);
         System.out.println("9:"+result);
+        output = encode(String.valueOf(input + x),SHIN_9);
+        System.out.println("99:"+output);
+        result = A +" + " + result + " = " + output;
         return result;
     }
 
