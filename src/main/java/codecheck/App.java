@@ -75,7 +75,7 @@ public class App {
             System.out.println("51:"+ input );
             String a = replaceEncode(input);
             System.out.println("52:"+ a);
-            output += (Integer.parseInt(a));
+            output += a;
         }
 
         return output;
