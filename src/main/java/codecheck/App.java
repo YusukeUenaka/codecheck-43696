@@ -70,12 +70,14 @@ public class App {
         int radix = B;
         int result = 0;
         String[] array = null;
+        int[] arrayNum = null;
         array = str.split("");
         System.out.println(String.valueOf(array[0].toString()));
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i].toString());
             System.out.println(replaceDecode(array[i].toString()));
-            result += Integer.parseInt(replaceDecode(array[i].toString()))*(9^(array.length-1-i));
+            System.out.println(String.valueOf(array.length-i));
+            arrayNum[array.length-i] = Integer.parseInt(replaceDecode(array[i].toString()));
         }
         System.out.println(String.valueOf(result));
         return String.valueOf(result);
