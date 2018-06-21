@@ -83,7 +83,7 @@ public class App {
             System.out.println("2:"+tmp);
             //arrayNum[i] = Integer.valueOf(tmp).intValue();
 
-            result += Integer.valueOf(tmp).intValue() *(9^array.length-1);
+            result += Integer.valueOf(tmp).intValue() *(9^(array.length-1));
 
             //System.out.println("3:"+String.valueOf(arrayNum[i]));
             System.out.println("3:"+result);
