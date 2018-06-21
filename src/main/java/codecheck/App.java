@@ -69,9 +69,9 @@ public class App {
         int count = 0;
         System.out.println("44:"+ numlist.get(1) );
 
-        for (i=length; i<=num.length-1; i--) {
-            System.out.println("50:"+ i );
-            String input = numlist.get(i).toString();
+        for (int b=length; b > 0; b--) { //(int i = 0; i < array.length; i++)
+            System.out.println("50:"+ (b-1));
+            String input = numlist.get(b-1).toString();
             System.out.println("51:"+ input );
             String a = replaceEncode(input);
             System.out.println("52:"+ a);
