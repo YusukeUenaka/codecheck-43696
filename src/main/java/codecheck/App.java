@@ -69,7 +69,7 @@ public class App {
         int count = 0;
         System.out.println("44:"+ numlist.get(1) );
 
-        for (int b=length-1; b > 0; b--) { //(int i = 0; i < array.length; i++)
+        for (int b=length-1; b >= 0; b--) { //(int i = 0; i < array.length; i++)
             System.out.println("50:"+ (b));
             String input = numlist.get(b).toString();
             System.out.println("51:"+ input );
