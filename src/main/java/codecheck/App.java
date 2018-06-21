@@ -59,9 +59,9 @@ public class App {
         int str = Integer.parseInt(A);
         int radix = B;
         int tmp =0;
-        
 
-        System.out.println(str.toString());
+
+        //System.out.println(str.toString());
 
 
 
