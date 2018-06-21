@@ -69,6 +69,7 @@ public class App {
         String str = A;
         int radix = B;
         int result = 0;
+        int output = 0;
         String[] array = null;
         int[] arrayNum = null;
         array = str.split("");
@@ -84,14 +85,15 @@ public class App {
             //arrayNum[i] = Integer.valueOf(tmp).intValue();
             System.out.println("4:"+String.valueOf(Math.pow(9,(array.length-1))));
             if ((array.length-i) > 0) {
-                result += Integer.valueOf(tmp).intValue() * (Math.pow(9, (array.length)));
+                result = (int) (Integer.valueOf(tmp).intValue() * (Math.pow(9, (array.length))));
                 System.out.println("3:"+result);
             } else if ((array.length-i) == 0) {
-                result += Integer.valueOf(tmp).intValue();
+                result = Integer.valueOf(tmp).intValue();
                 System.out.println("5:"+result);
             }
+            output += result;
             //System.out.println("3:"+String.valueOf(arrayNum[i]));
-            System.out.println("3:"+result);
+            System.out.println("9:"+output);
         }
 //        for (int i = 0; i < arrayNum.length; i++) {
 //            result += arrayNum[i]*(9^arrayNum.length);
