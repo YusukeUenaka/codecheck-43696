@@ -52,7 +52,6 @@ public class App {
         String result = null;
         int i=0;
         int last = 0;
-        System.out.println("0:"+str);
         while (str >= 9 ) {
             numlist.add(str%9);
             str = str/9;
