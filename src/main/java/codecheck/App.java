@@ -70,6 +70,7 @@ public class App {
         int radix = B;
         int result = 0;
         int output = 0;
+        int beki = 0;
         String[] array = null;
         int[] arrayNum = null;
         array = str.split("");
@@ -83,9 +84,12 @@ public class App {
             String tmp = replaceDecode(array[i].toString());
             System.out.println("2:"+tmp);
             //arrayNum[i] = Integer.valueOf(tmp).intValue();
-            System.out.println("4:"+String.valueOf(Math.pow(9,(array.length-1))));
-            if ((array.length-i) > 0) {
-                result = (int) (Integer.valueOf(tmp).intValue() * (Math.pow(9, (array.length))));
+            //System.out.println("4:"+String.valueOf(Math.pow(9,(array.length-1))));
+            beki = (int) Math.pow(9,Integer.valueOf(tmp));
+            System.out.println("4:"+String.valueOf(beki));
+            if ((array.length-1-i) > 0) {
+                //result = (int) (Integer.valueOf(tmp).intValue() * (Math.pow(9, (array.length))));
+                result = (Integer.valueOf(tmp).intValue() * (beki));
                 System.out.println("3:"+result);
             } else if ((array.length-i) == 0) {
                 result = Integer.valueOf(tmp).intValue();
