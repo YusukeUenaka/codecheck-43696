@@ -75,8 +75,7 @@ public class App {
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i].toString());
             System.out.println(replaceDecode(array[i].toString()));
-            int a = 9^i;
-            System.out.println("jijo:"+a);
+            System.out.println("jijo:"+array.length);
 
             result += Integer.parseInt(replaceDecode(array[i].toString()))*(9^i);
         }
