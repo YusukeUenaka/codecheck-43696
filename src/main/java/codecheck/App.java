@@ -70,7 +70,12 @@ public class App {
         System.out.println("44:"+ numlist.get(1) );
 
         for (i=length; i<=num.length-1; i--) {
-            output += (Integer.parseInt(replaceEncode(numlist.get(i).toString())));
+            System.out.println("50:"+ i );
+            String input = numlist.get(i).toString();
+            System.out.println("51:"+ input );
+            String a = replaceEncode(input);
+            System.out.println("52:"+ a);
+            output += (Integer.parseInt(a));
         }
 
         return output;
