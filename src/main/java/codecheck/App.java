@@ -57,15 +57,26 @@ public class App {
         int str = Integer.parseInt(A);
         int radix = B;
         int tmp =0;
-
-
-        //System.out.println(str.toString());
-
-
-
-        String result = Long.toString(str, radix);
-
-        //int result =(int)Long.parseLong(str, radix);
+        int[] num = null;
+        String result = null;
+        int i=0;
+        while (str < 9 ) {
+            num[i] = str%9;
+            str = str/9;
+            i++;
+            System.out.println("1:"+String.valueOf(num[i]));
+            System.out.println("2:"+String.valueOf(str));
+        }
+        num[i]=str;
+        String[] array = null;
+        for (int a=0; a==i; a++) {
+            array[a] = String.valueOf(num[i]);
+            System.out.println("3:"+array[a].toString());
+        }
+        for (int K = array.length-1; K==0; K--) {
+            result += array[K].toString();
+            System.out.println("9:"+result);
+        }
         return result;
     }
 
