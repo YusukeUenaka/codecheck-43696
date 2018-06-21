@@ -64,11 +64,14 @@ public class App {
         int length = numlist.size();
         System.out.println("3:"+length);
         String[] array = null;
-        for (int a=0; a==length; a++) {
+        int count = 0;
+        for (int a=length; a==0; a--) {
+            System.out.println("33:"+ a );
             int list = numlist.get(a);
             System.out.println("4:"+list);
-            array[a] = replaceEncode(String.valueOf(numlist.get(a)));
+            array[count] = replaceEncode(String.valueOf(numlist.get(a)));
             System.out.println("5:"+array[a].toString());
+            count++;
         }
         for (int K = array.length-1; K==0; K--) {
             result += array[K].toString();
