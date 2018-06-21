@@ -77,7 +77,7 @@ public class App {
             System.out.println(replaceDecode(array[i].toString()));
             int a = 9^(array.length-1-i);
             System.out.println("jijo:"+a);
-            
+
             result += Integer.parseInt(replaceDecode(array[i].toString()))*(9^(array.length-1-i));
         }
         System.out.println(String.valueOf(result));
@@ -103,16 +103,17 @@ public class App {
 
 
     public static String replaceDecode(String str) {
-        StringBuilder result = new StringBuilder();
-        result = result.append(str.replaceAll("a,A","0"));
-        result = result.append(str.replaceAll("b,B","1"));
-        result = result.append(str.replaceAll("c,C","2"));
-        result = result.append(str.replaceAll("d,D","3"));
-        result = result.append(str.replaceAll("e,E","4"));
-        result = result.append(str.replaceAll("f,F","5"));
-        result = result.append(str.replaceAll("g,G","6"));
-        result = result.append(str.replaceAll("h,H","7"));
-        result = result.append(str.replaceAll("i,I","8"));
+        String result = null;
+        //StringBuilder result = new StringBuilder();
+        result = str.replaceAll("a,A","0");
+        result = str.replaceAll("b,B","1");
+        result = str.replaceAll("c,C","2");
+        result = str.replaceAll("d,D","3");
+        result = str.replaceAll("e,E","4");
+        result = str.replaceAll("f,F","5");
+        result = str.replaceAll("g,G","6");
+        result = str.replaceAll("h,H","7");
+        result = str.replaceAll("i,I","8");
         return result.toString();
     }
     public static String replaceEncode (String str) {
