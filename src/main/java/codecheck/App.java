@@ -72,7 +72,7 @@ public class App {
         String[] array = null;
         array = str.split("");
         System.out.println(String.valueOf(array[0].toString()));
-        for (int i = 0; i < array.length-1; i++) {
+        for (int i = 0; i < array.length; i++) {
             System.out.println(array[i].toString());
             System.out.println((array.length-i));
             int a = 9^(array.length-1-i);
