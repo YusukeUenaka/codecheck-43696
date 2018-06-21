@@ -109,10 +109,20 @@ public class App {
         System.out.println("1:"+input);
 
         int x = 1;
+        do {
+        	input += x;
+        	System.out.println("2:" + x);
+        	if((input%10) !=7 && (inpu%10)!=0) {
+        		continue;
+        	}
+        	x++;
+        	
+        }while(inpput%7 !=0);
+        /*
         while ((input+x)%7 != 0 && (input+x)%10 !=7 && (input+x)%10 !=0 ){
             System.out.println("2:" + x);
             x++;
-        }
+        }*/
         System.out.println("3:"+x);
         result = encode(String.valueOf(x), SHIN_9);
         System.out.println("9:"+result);
