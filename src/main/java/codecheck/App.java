@@ -73,10 +73,11 @@ public class App {
         int[] arrayNum = null;
         array = str.split("");
         System.out.println(String.valueOf(array[0].toString()));
+        int k = array.length;
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i].toString());
             System.out.println(replaceDecode(array[i].toString()));
-            System.out.println(String.valueOf(array.length-1-i));
+            System.out.println(String.valueOf(k));
             arrayNum[array.length-1-i] = Integer.parseInt(replaceDecode(array[i].toString()));
         }
         System.out.println(String.valueOf(result));
