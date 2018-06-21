@@ -54,7 +54,7 @@ public class App {
     }
 
     public static String encode(String A, int B) {
-        int str = Integer.parseInt(A);
+        int str = Integer.parseInt(replaceEncode(A));
         int radix = B;
         int tmp =0;
         int[] num = null;
