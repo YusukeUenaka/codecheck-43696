@@ -83,8 +83,11 @@ public class App {
             System.out.println("2:"+tmp);
             //arrayNum[i] = Integer.valueOf(tmp).intValue();
             System.out.println("4:"+String.valueOf(Math.pow(9,(array.length-1))));
-            result += Integer.valueOf(tmp).intValue() *(Math.pow(9,(array.length-1)));
-
+            if ((array.length-i) > 0) {
+                result += Integer.valueOf(tmp).intValue() * (Math.pow(9, (array.length)));
+            } else {
+                result += Integer.valueOf(tmp).intValue();
+            }
             //System.out.println("3:"+String.valueOf(arrayNum[i]));
             System.out.println("3:"+result);
         }
