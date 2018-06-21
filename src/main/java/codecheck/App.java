@@ -54,12 +54,13 @@ public class App {
     }
 
     public static String encode(String A, int B) {
-        int str = Integer.parseInt(replaceEncode(A));
+        int str = Integer.parseInt(A);
         int radix = B;
         int tmp =0;
         int[] num = null;
         String result = null;
         int i=0;
+        System.out.println(str);
         while (str < 9 ) {
             num[i] = str%9;
             str = str/9;
@@ -70,7 +71,7 @@ public class App {
         num[i]=str;
         String[] array = null;
         for (int a=0; a==i; a++) {
-            array[a] = String.valueOf(num[i]);
+            array[a] = replaceEncode(String.valueOf(num[i]));
             System.out.println("3:"+array[a].toString());
         }
         for (int K = array.length-1; K==0; K--) {
