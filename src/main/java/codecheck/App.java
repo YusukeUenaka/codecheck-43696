@@ -48,10 +48,12 @@ public class App {
         int str = Integer.parseInt(A);
         int radix = B;
         int tmp =0;
+        String output =null;
         ArrayList<Integer> numlist = new ArrayList<>();
         int[] num = null;
         String result = null;
         int i=0;
+        int last = 0;
         System.out.println("0:"+str);
         while (str >= 9 ) {
             numlist.add(str%9);
@@ -67,19 +69,11 @@ public class App {
         int count = 0;
         System.out.println("44:"+ numlist.get(1) );
 
-        for (int a=length; a <= 0; a--) {
-            System.out.println("33:"+ a );
-            int list = numlist.get(a);
-            System.out.println("4:"+list);
-            array[count] = replaceEncode(String.valueOf(numlist.get(a)));
-            System.out.println("5:"+array[a].toString());
-            count++;
+        for (i=length; i<=num.length-1; i--) {
+            output += (Integer.parseInt(replaceEncode(numlist.get(i).toString())));
         }
-//        for (int K = array.length-1; K==0; K--) {
-//            result += array[K].toString();
-//            System.out.println("9:"+result);
-//        }
-        return result;
+
+        return output;
     }
 
     public static String decode(String A, int B) {
