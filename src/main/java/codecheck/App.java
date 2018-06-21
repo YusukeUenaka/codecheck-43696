@@ -79,8 +79,9 @@ public class App {
                 break;
             }
             System.out.println(String.valueOf("1:"+array[i].toString()));
-            System.out.println("2:"+String.valueOf(replaceDecode(array[i].toString())));
-            arrayNum[i] = Integer.parseInt(replaceDecode(array[i].toString()));
+            String tmp = replaceDecode(array[i].toString());
+            System.out.println("2:"+tmp);
+            arrayNum[i] = Integer.parseInt(tmp);
             System.out.println("3:"+String.valueOf(arrayNum[i]));
         }
         for (int i = 0; i < arrayNum.length; i++) {
