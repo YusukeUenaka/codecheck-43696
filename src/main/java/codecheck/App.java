@@ -74,14 +74,17 @@ public class App {
         array = str.split("");
         System.out.println(String.valueOf("1:"+array[0].toString()));
         int k = array.length;
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length-1; i++) {
             if (array[i] == null) {
                 break;
             }
+            System.out.println("2:"+String.valueOf(replaceDecode(array[i].toString())));
             arrayNum[i] = Integer.parseInt(replaceDecode(array[i].toString()));
-            System.out.println("2:"+String.valueOf(arrayNum[i]));
+            System.out.println("3:"+String.valueOf(arrayNum[i]));
         }
-        //String[]
+        for (int i = 0; i < arrayNum.length; i++) {
+
+        }
 
         System.out.println(String.valueOf(result));
         return String.valueOf(result);
