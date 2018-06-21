@@ -74,10 +74,11 @@ public class App {
         System.out.println(String.valueOf(array[0].toString()));
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i].toString());
-            System.out.println((array.length-i));
+            System.out.println(replaceDecode(array[i].toString()));
             int a = 9^(array.length-1-i);
             System.out.println("jijo:"+a);
-            result += Integer.parseInt(array[i].toString())*(9^(array.length-1-i));
+            
+            result += Integer.parseInt(replaceDecode(array[i].toString()))*(9^(array.length-1-i));
         }
         System.out.println(String.valueOf(result));
         return String.valueOf(result);
