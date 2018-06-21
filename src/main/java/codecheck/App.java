@@ -61,10 +61,12 @@ public class App {
             i++;
         }
         numlist.add(str);
+        int length = numlist.size();
+        System.out.println("3:"+length);
         String[] array = null;
-        for (int a=0; a==i; a++) {
-            array[a] = replaceEncode(String.valueOf(numlist.get(i)));
-            System.out.println("3:"+array[a].toString());
+        for (int a=0; a==length; a++) {
+            array[a] = replaceEncode(String.valueOf(numlist.get(a)));
+            System.out.println("4:"+array[a].toString());
         }
         for (int K = array.length-1; K==0; K--) {
             result += array[K].toString();
