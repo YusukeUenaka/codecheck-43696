@@ -61,7 +61,7 @@ public class App {
         String result = null;
         int i=0;
         System.out.println(str);
-        while (str < 9 ) {
+        while (str >= 9 ) {
             num[i] = str%9;
             str = str/9;
             i++;
