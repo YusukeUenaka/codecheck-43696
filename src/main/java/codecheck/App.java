@@ -85,7 +85,7 @@ public class App {
             System.out.println("2:"+tmp);
             //arrayNum[i] = Integer.valueOf(tmp).intValue();
             //System.out.println("4:"+String.valueOf(Math.pow(9,(array.length-1))));
-            beki = (int) Math.pow(9,Integer.valueOf(tmp));
+            beki = (int) Math.pow(9,Integer.valueOf(array.length-1));
             System.out.println("4:"+String.valueOf(beki));
             if ((array.length-1-i) > 0) {
                 //result = (int) (Integer.valueOf(tmp).intValue() * (Math.pow(9, (array.length))));
@@ -171,6 +171,38 @@ public class App {
         return result.toString();
     }
     public static String replaceEncode (String str) {
+        String result = null;
+        //StringBuilder result = new StringBuilder();
+        switch(str) {
+            case "0":
+                result = str.replaceAll("0","A");
+                break;
+            case "1":
+                result = str.replaceAll("1","B");
+                break;
+            case "2":
+                result = str.replaceAll("2","C");
+                break;
+            case "3":
+                result = str.replaceAll("3","D");
+                break;
+            case "4":
+                result = str.replaceAll("4","E");
+                break;
+            case "5":
+                result = str.replaceAll("5","F");
+                break;
+            case "6":
+                result = str.replaceAll("6","G");
+                break;
+            case "7":
+                result = str.replaceAll("7","H");
+                break;
+            case "8":
+                result = str.replaceAll("8","I");
+                break;
+        }
+        /*
         StringBuilder result = new StringBuilder();
         result = result.append(str.replaceAll("0","A"));
         result = result.append(str.replaceAll("1","B"));
@@ -180,7 +212,7 @@ public class App {
         result = result.append(str.replaceAll("5","F"));
         result = result.append(str.replaceAll("6","G"));
         result = result.append(str.replaceAll("7","H"));
-        result = result.append(str.replaceAll("8","I"));
+        result = result.append(str.replaceAll("8","I"));*/
         return result.toString();
     }
 }
