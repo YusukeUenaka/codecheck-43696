@@ -65,7 +65,9 @@ public class App {
         System.out.println("3:"+length);
         String[] array = null;
         int count = 0;
-        for (int a=length; a==0; a--) {
+        System.out.println("44:"+ numlist.get(1) );
+
+        for (int a=length; a <= 0; a--) {
             System.out.println("33:"+ a );
             int list = numlist.get(a);
             System.out.println("4:"+list);
@@ -73,10 +75,10 @@ public class App {
             System.out.println("5:"+array[a].toString());
             count++;
         }
-        for (int K = array.length-1; K==0; K--) {
-            result += array[K].toString();
-            System.out.println("9:"+result);
-        }
+//        for (int K = array.length-1; K==0; K--) {
+//            result += array[K].toString();
+//            System.out.println("9:"+result);
+//        }
         return result;
     }
 
