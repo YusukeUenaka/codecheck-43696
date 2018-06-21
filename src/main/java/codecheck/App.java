@@ -1,5 +1,6 @@
 package codecheck;
 
+import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 public class App {
@@ -47,23 +48,22 @@ public class App {
         int str = Integer.parseInt(A);
         int radix = B;
         int tmp =0;
-
+        ArrayList<Integer> numlist = new ArrayList<>();
         int[] num = null;
         String result = null;
         int i=0;
         System.out.println("0:"+str);
         while (str >= 9 ) {
-            num[i] =0;
-            num[i] = str%9;
+            numlist.add(str%9);
             str = str/9;
-            i++;
-            System.out.println("1:"+String.valueOf(num[i]));
+            System.out.println("1:"+String.valueOf(numlist.get(i)));
             System.out.println("2:"+String.valueOf(str));
+            i++;
         }
-        num[i] = str;
+        numlist.add(str);
         String[] array = null;
         for (int a=0; a==i; a++) {
-            array[a] = replaceEncode(String.valueOf(num[i]));
+            array[a] = replaceEncode(String.valueOf(numlist.get(i)));
             System.out.println("3:"+array[a].toString());
         }
         for (int K = array.length-1; K==0; K--) {
