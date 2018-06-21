@@ -81,11 +81,11 @@ public class App {
             System.out.println(String.valueOf("1:"+array[i].toString()));
             String tmp = replaceDecode(array[i].toString());
             System.out.println("2:"+tmp);
-            arrayNum[i] = Integer.parseInt(tmp);
+            arrayNum[i] = Integer.valueOf(tmp).intValue();
             System.out.println("3:"+String.valueOf(arrayNum[i]));
         }
         for (int i = 0; i < arrayNum.length; i++) {
-
+            result += arrayNum[i]*(9^arrayNum.length);
         }
 
         System.out.println(String.valueOf(result));
