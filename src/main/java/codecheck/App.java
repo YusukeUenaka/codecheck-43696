@@ -103,8 +103,18 @@ public class App {
     public static String align(String A) {
         String result = null;
         String str = A;
-        int base = Integer.parseInt(str, SHIN_9);
-
+        str = decode(str, SHIN_9);
+        int input = Integer.valueOf(str);
+        System.out.println("1:"+input);
+        
+        int x = 1;
+        while (((input+x)%7) == 0) {
+            System.out.println("2:"+x);
+            x++;
+        }
+        System.out.println("3:"+x);
+        result = encode(String.valueOf(x), SHIN_9);
+        System.out.println("9:"+result);
         return result;
     }
 
@@ -184,17 +194,6 @@ public class App {
                 result = str.replaceAll("8","I");
                 break;
         }
-        /*
-        StringBuilder result = new StringBuilder();
-        result = result.append(str.replaceAll("0","A"));
-        result = result.append(str.replaceAll("1","B"));
-        result = result.append(str.replaceAll("2","C"));
-        result = result.append(str.replaceAll("3","D"));
-        result = result.append(str.replaceAll("4","E"));
-        result = result.append(str.replaceAll("5","F"));
-        result = result.append(str.replaceAll("6","G"));
-        result = result.append(str.replaceAll("7","H"));
-        result = result.append(str.replaceAll("8","I"));*/
         return result.toString();
     }
 }
