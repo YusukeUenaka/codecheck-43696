@@ -56,9 +56,15 @@ public class App {
     }
 
     public static String encode(String A, int B) {
-        Long str = Long.parseLong(A);
+        int str = Integer.parseInt(A);
         int radix = B;
+        int tmp =0;
+        
+
         System.out.println(str.toString());
+
+
+
         String result = Long.toString(str, radix);
 
         //int result =(int)Long.parseLong(str, radix);
@@ -85,13 +91,13 @@ public class App {
             System.out.println("2:"+tmp);
             //arrayNum[i] = Integer.valueOf(tmp).intValue();
             //System.out.println("4:"+String.valueOf(Math.pow(9,(array.length-1))));
-            beki = (int) Math.pow(9,Integer.valueOf(array.length-1));
+            beki = (int) Math.pow(9,Integer.valueOf(array.length-i-1));
             System.out.println("4:"+String.valueOf(beki));
             if ((array.length-1-i) > 0) {
                 //result = (int) (Integer.valueOf(tmp).intValue() * (Math.pow(9, (array.length))));
                 result = (Integer.valueOf(tmp).intValue() * (beki));
                 System.out.println("3:"+result);
-            } else if ((array.length-i) == 0) {
+            } else if ((array.length-1-i) == 0) {
                 result = Integer.valueOf(tmp).intValue();
                 System.out.println("5:"+result);
             }
