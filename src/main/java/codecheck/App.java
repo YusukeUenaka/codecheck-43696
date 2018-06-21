@@ -105,6 +105,36 @@ public class App {
     public static String replaceDecode(String str) {
         String result = null;
         //StringBuilder result = new StringBuilder();
+        switch(str) {
+            case "A":
+                result = str.replaceAll("A","0");
+                break;
+            case "B":
+                result = str.replaceAll("B","1");
+                break;
+            case "C":
+                result = str.replaceAll("C","2");
+                break;
+            case "D":
+                result = str.replaceAll("D","3");
+                break;
+            case "E":
+                result = str.replaceAll("E","4");
+                break;
+            case "F":
+                result = str.replaceAll("F","5");
+                break;
+            case "G":
+                result = str.replaceAll("G","6");
+                break;
+            case "H":
+                result = str.replaceAll("H","7");
+                break;
+            case "I":
+                result = str.replaceAll("I","8");
+                break;
+        }
+        /*
         result = str.replaceAll("A","0");
         result = str.replaceAll("B","1");
         result = str.replaceAll("C","2");
@@ -114,6 +144,7 @@ public class App {
         result = str.replaceAll("G","6");
         result = str.replaceAll("H","7");
         result = str.replaceAll("I","8");
+        */
         return result.toString();
     }
     public static String replaceEncode (String str) {
