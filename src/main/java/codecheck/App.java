@@ -105,15 +105,15 @@ public class App {
     public static String replaceDecode(String str) {
         String result = null;
         //StringBuilder result = new StringBuilder();
-        result = str.replaceAll("a,A","0");
-        result = str.replaceAll("b,B","1");
-        result = str.replaceAll("c,C","2");
-        result = str.replaceAll("d,D","3");
-        result = str.replaceAll("e,E","4");
-        result = str.replaceAll("f,F","5");
-        result = str.replaceAll("g,G","6");
-        result = str.replaceAll("h,H","7");
-        result = str.replaceAll("i,I","8");
+        result = str.replaceAll("A","0");
+        result = str.replaceAll("B","1");
+        result = str.replaceAll("C","2");
+        result = str.replaceAll("D","3");
+        result = str.replaceAll("E","4");
+        result = str.replaceAll("F","5");
+        result = str.replaceAll("G","6");
+        result = str.replaceAll("H","7");
+        result = str.replaceAll("I","8");
         return result.toString();
     }
     public static String replaceEncode (String str) {
