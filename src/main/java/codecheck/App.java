@@ -29,17 +29,7 @@ public class App {
         String str = null;
         String cmd = CMD;
         String num = NUM;
-/*        String[] strNum = null;
 
-        if (!isNumber(num)) {
-                strNum = num.split("");
-        }
-
-
-        for (int i = 0, l = args.length; i < l; i++) {
-            replaceDecode(strNum[i].toString());
-        }
-*/
         //処理
         if (ENCODE.equals(cmd)) {
             return encode(num, SHIN_9);
@@ -57,21 +47,20 @@ public class App {
         int str = Integer.parseInt(A);
         int radix = B;
         int tmp =0;
+
         int[] num = null;
         String result = null;
         int i=0;
-        System.out.println(str);
+        System.out.println("0:"+str);
         while (str >= 9 ) {
-            System.out.println(str);
-            System.out.println(num[i]);
-            num[i] = 0;
+            num[i] =0;
             num[i] = str%9;
             str = str/9;
             i++;
             System.out.println("1:"+String.valueOf(num[i]));
             System.out.println("2:"+String.valueOf(str));
         }
-        num[i]=str;
+        num[i] = str;
         String[] array = null;
         for (int a=0; a==i; a++) {
             array[a] = replaceEncode(String.valueOf(num[i]));
