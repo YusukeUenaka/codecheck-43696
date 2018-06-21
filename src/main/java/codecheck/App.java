@@ -74,7 +74,7 @@ public class App {
         array = str.split("");
         //System.out.println(String.valueOf("1:"+array[0].toString()));
         int k = array.length;
-        for (int i = 0; i < array.length-1; i++) {
+        for (int i = 0; i < array.length; i++) {
             if (array[i] == null) {
                 break;
             }
@@ -83,7 +83,7 @@ public class App {
             System.out.println("2:"+tmp);
             //arrayNum[i] = Integer.valueOf(tmp).intValue();
 
-            result += Integer.valueOf(tmp).intValue() *(9^array.length);
+            result += Integer.valueOf(tmp).intValue() *(9^array.length-1);
 
             //System.out.println("3:"+String.valueOf(arrayNum[i]));
             System.out.println("3:"+result);
