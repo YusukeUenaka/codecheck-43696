@@ -109,15 +109,15 @@ public class App {
         System.out.println("1:"+input);
 
         int test = 63;
-        if ((test%10) !=7 && (test%10)!=0 && test%7 !=0) {
+        if ((test%10) ==7 || (test%10) ==0 && test%7 ==0) {
             System.out.println("test1:" + test);
         }
         test = 67;
-        if ((test%10) !=7 && (test%10)!=0 && test%7 !=0) {
+        if ((test%10) ==7 || (test%10) ==0 && test%7 ==0) {
             System.out.println("test2:" + test);
         }
         test = 70;
-        if ((test%10) !=7 && (test%10)!=0 && test%7 !=0) {
+        if ((test%10) ==7 || (test%10) ==0 && test%7 ==0) {
             System.out.println("test3:" + test);
         }
 
