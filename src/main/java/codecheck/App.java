@@ -21,8 +21,6 @@ public class App {
                 NUM = args[i].toString();
             }
         }
-        System.out.println(CMD);
-        System.out.println(NUM);
         String output = answer(CMD, NUM);
         System.out.println(output);
     }
@@ -148,17 +146,6 @@ public class App {
                 result = str.replaceAll("I","8");
                 break;
         }
-        /*
-        result = str.replaceAll("A","0");
-        result = str.replaceAll("B","1");
-        result = str.replaceAll("C","2");
-        result = str.replaceAll("D","3");
-        result = str.replaceAll("E","4");
-        result = str.replaceAll("F","5");
-        result = str.replaceAll("G","6");
-        result = str.replaceAll("H","7");
-        result = str.replaceAll("I","8");
-        */
         return result.toString();
     }
     public static String replaceEncode (String str) {
