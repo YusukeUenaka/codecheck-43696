@@ -77,7 +77,7 @@ public class App {
             System.out.println((array.length-i));
             int a = 9^(array.length-1-i);
             System.out.println("jijo:"+a);
-            result += Integer.parseInt(array[i].toString())*(9^(array.length-i));
+            result += Integer.parseInt(array[i].toString())*(9^(array.length-1-i));
         }
         System.out.println(String.valueOf(result));
         return String.valueOf(result);
