@@ -106,27 +106,26 @@ public class App {
         String str = A;
         str = decode(str, SHIN_9);
         int input = Integer.valueOf(str);
-        System.out.println("1:"+input);
+        //System.out.println("1:"+input);
 
         int a = String.valueOf(input).length();
         int x = 10;
         int base = (int) Math.pow(x,Integer.valueOf(a-1));
 
-        System.out.println("55:" + a);
-        System.out.println("56:" + base);
+        //System.out.println("55:" + a);
+        //System.out.println("56:" + base);
         while ((input+base)%7 != 0){
-            System.out.println("2:" + x);
             if ((input+base)%10 !=7 && (input+base)%10 !=0 ) {
                 base++;
             }
         }
 
 
-        System.out.println("3:"+x);
+        //System.out.println("3:"+x);
         result = encode(String.valueOf(x), SHIN_9);
-        System.out.println("9:"+result);
+        //System.out.println("9:"+result);
         output = encode(String.valueOf(input + x),SHIN_9);
-        System.out.println("99:"+output);
+        //System.out.println("99:"+output);
         result = A +" + " + result + " = " + output;
         return result;
     }
