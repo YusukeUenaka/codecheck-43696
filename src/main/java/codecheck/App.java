@@ -119,19 +119,19 @@ public class App {
         boolean tmp1= false;
         boolean tmp2 = false;
         boolean tmp3= false;
-        while ((tmp1 == ture) &&(tmp2 == ture) &&(tmp3 == ture) ) {
-        	if((input+x)%7 == 0) {
-        		tmp1 = true;
-        	}
-        	if((input+x)%10 == 0) {
-        		tmp2 = true;
-        	}
-        	if((input+x)%10 == 7) {
-        		tmp3 = true;
-        	}
-        	x++;
-        	System.out.println("2:" + x);
-        	System.out.println("5:" + tmp1+tmp2+tmp3);
+        while ((tmp1 == true) &&(tmp2 == true) &&(tmp3 == true) ) {
+            if((input+x)%7 == 0) {
+                tmp1 = true;
+            }
+            if((input+x)%10 == 0) {
+                tmp2 = true;
+            }
+            if((input+x)%10 == 7) {
+                tmp3 = true;
+            }
+            x++;
+            System.out.println("2:" + x);
+            System.out.println("5:" + tmp1+tmp2+tmp3);
 
         }
 
