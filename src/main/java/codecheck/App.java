@@ -110,7 +110,12 @@ public class App {
 
         int a = String.valueOf(input).length();
         int x = 10;
-        int base = (int) Math.pow(x,Integer.valueOf(a-1));
+        int base = 0;
+        if (a > 1) {
+            base = (int) Math.pow(x, Integer.valueOf(a - 1));
+        } else  if (a == 1) {
+            base = 1;
+        }
 
         //System.out.println("55:" + a);
         //System.out.println("56:" + base);
