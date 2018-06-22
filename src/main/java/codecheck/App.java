@@ -109,14 +109,16 @@ public class App {
         System.out.println("1:"+input);
 
         int a = String.valueOf(input).length();
-        int x = 1;
+        int x = 10;
+        int base = (int) Math.pow(x,Integer.valueOf(a-1));
+
         System.out.println("55:" + a);
-        while ((input+x)%7 != 0){
+        System.out.println("56:" + base);
+        while ((input+base)%7 != 0){
             System.out.println("2:" + x);
-            if ((input+x)%10 ==7 && (input+x)%10 ==0 ) {
-                break;
+            if ((input+base)%10 !=7 && (input+base)%10 !=0 ) {
+                base++;
             }
-            x++;
         }
 
 
