@@ -119,7 +119,7 @@ public class App {
         boolean tmp1= false;
         boolean tmp2 = false;
         boolean tmp3= false;
-        while ((tmp1&&tmp2)&&tmp3) {
+        while ((tmp1 == ture) &&(tmp2 == ture) &&(tmp3 == ture) ) {
         	if((input+x)%7 == 0) {
         		tmp1 = true;
         	}
