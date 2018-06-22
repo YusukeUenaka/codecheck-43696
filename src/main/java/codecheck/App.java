@@ -108,35 +108,14 @@ public class App {
         int input = Integer.valueOf(str);
         System.out.println("1:"+input);
 
-        int test = 63;
-        if (((test%10) ==7 || (test%10) ==0) && test%7 ==0) {
-            System.out.println("test1:" + test);
-        }
-        test = 67;
-        if (((test%10) ==7 || (test%10) ==0) && test%7 ==0) {
-            System.out.println("test2:" + test);
-        }
-        test = 70;
-        if (((test%10) ==7 || (test%10) ==0) && test%7 ==0) {
-            System.out.println("test3:" + test);
-        }
-
-
-        int x = 1;
-        do {
-            input += x;
+        int x = 0;
+        while ((input+x)%7 != 0){
             System.out.println("2:" + x);
-            if((input%10) !=7 && (input%10)!=0) {
-                continue;
+            if ((input+x)%10 !=7 && (input+x)%10 !=0 ) {
+                break;
             }
             x++;
-
-        }while(input%7 !=0);
-        /*
-        while ((input+x)%7 != 0 && (input+x)%10 !=7 && (input+x)%10 !=0 ){
-            System.out.println("2:" + x);
-            x++;
-        }*/
+        }
         System.out.println("3:"+x);
         result = encode(String.valueOf(x), SHIN_9);
         System.out.println("9:"+result);
