@@ -111,7 +111,7 @@ public class App {
         int x = 0;
         while ((input+x)%7 != 0){
             System.out.println("2:" + x);
-            if ((input+x)%10 !=7 && (input+x)%10 !=0 ) {
+            if ((input+x)%10 ==7 && (input+x)%10 ==0 ) {
                 break;
             }
             x++;
