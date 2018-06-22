@@ -108,22 +108,32 @@ public class App {
         int input = Integer.valueOf(str);
         //System.out.println("1:"+input);
 
+        if (input == 0) {
+            System.out.println("50:" + encode(String.valueOf(7), SHIN_9));
+            return  encode(String.valueOf(7), SHIN_9);
+        }
+        
+        
         int a = String.valueOf(input).length();
         int x = 10;
-        int base = 0;
-        if (a > 1) {
-            base = (int) Math.pow(x, Integer.valueOf(a - 1));
-        } else  if (a == 1) {
-            base = 1;
+        ArrayList<Integer> base = new ArrayList<>();
+        for (int i =a-1; a==0; a-- ) {
+            base.add((int) Math.pow(7, Integer.valueOf(i)));
+        }
+        int resultInt = 0;
+        for (int k=0; k<base.size(); k++){
+            resultInt += base.get(k);
+            System.out.println("55:" + resultInt);
         }
 
         //System.out.println("55:" + a);
         //System.out.println("56:" + base);
+        /*
         while ((input+base)%7 != 0){
             if ((input+base)%10 !=7 && (input+base)%10 !=0 ) {
                 base++;
             }
-        }
+        }*/
 
 
         //System.out.println("3:"+x);
